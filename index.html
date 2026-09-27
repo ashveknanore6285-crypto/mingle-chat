@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mingle Chat</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f1117;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 1px solid #292d38;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #7c5cff;
+    }
+
+    .tagline {
+      margin-top: 8px;
+      color: #9da3b4;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .welcome h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .welcome p {
+      color: #9da3b4;
+    }
+
+    .rooms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .room {
+      background: #181b24;
+      border: 1px solid #292d38;
+      border-radius: 14px;
+      padding: 22px;
+      transition: 0.2s;
+    }
+
+    .room:hover {
+      transform: translateY(-3px);
+      border-color: #7c5cff;
+    }
+
+    .room h2 {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+
+    .room p {
+      color: #9da3b4;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .users {
+      color: #7c5cff;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #7c5cff;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #6848e8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #6f7482;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Mingle<span>Chat</span></div>
+    <div class="tagline">Meet. Talk. Mingle.</div>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <h1>Welcome to Mingle Chat</h1>
+      <p>Choose a room and start meeting people.</p>
+    </section>
+
+    <section class="rooms">
+
+      <div class="room">
+        <h2>💬 General Chat</h2>
+        <p>Talk about anything and meet new people.</p>
+        <div class="users">🟢 0 people online</div>
+        <button onclick="joinRoom('General Chat')">
+          Join Room
+        </button>
+      </div>
+
+      <div class="room">
+        <h2>❤️ Dating & Relationships</h2>
+        <p>Talk, connect and make new connections.</p>
+        <div class="users">🟢 0 people online</div>
+        <button onclick="joinRoom('Dating & Relationships')">
+          Join Room
+        </button>
+      </div>
+
+      <div class="room">
+        <h2>🎮 Gaming</h2>
+        <p>Chat with people who love gaming.</p>
+        <div class="users">🟢 0 people online</div>
+        <button onclick="joinRoom('Gaming')">
+          Join Room
+        </button>
+      </div>
+
+      <div class="room">
+        <h2>🎵 Music</h2>
+        <p>Share music and discover new songs.</p>
+        <div class="users">🟢 0 people online</div>
+        <button onclick="joinRoom('Music')">
+          Join Room
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Mingle Chat
+  </footer>
+
+  <script>
+    function joinRoom(room) {
+      alert("Welcome to " + room + "!");
+    }
+  </script>
+
+</body>
+</html>
